@@ -1,2 +1,2 @@
 install:
-	sudo cp -fr theme_light/* /usr/share/scite/
+	sudo cp -fr theme_dark/* /usr/share/scite/
