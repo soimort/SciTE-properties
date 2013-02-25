@@ -3,4 +3,4 @@
 default:
 
 install:
-	sudo cp -fr properties/* /usr/share/scite/
+	@sudo cp -fr properties/* /usr/share/scite/
