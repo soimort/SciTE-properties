@@ -1,0 +1,236 @@
+--- ../old/SciTEGlobal.properties	2013-04-12 15:06:35.000000000 +0200
++++ SciTEGlobal.properties	2013-04-17 20:42:17.245099596 +0200
+@@ -16,7 +16,7 @@
+ position.height=740
+ #position.maximize=1
+ #position.tile=1
+-#full.screen.hides.menu=1
++full.screen.hides.menu=1
+ #minimize.to.tray=1
+ split.vertical=1
+ #output.horizontal.size=200
+@@ -38,15 +38,15 @@
+ #toolbar.usestockicons=1
+ #menubar.detachable=1
+ #undo.redo.lazy=1
+-#statusbar.visible=1
++statusbar.visible=1
+ #fileselector.width=800
+ #fileselector.height=600
+ #fileselector.show.hidden=1
+-#magnification=-1
++magnification=2
+ #output.magnification=-1
+ 
+ # Sizes and visibility in edit pane
+-#line.margin.visible=1
++line.margin.visible=1
+ line.margin.width=4
+ margin.width=16
+ #fold.margin.width=16
+@@ -67,9 +67,9 @@
+ view.indentation.guides=1
+ view.indentation.examine=3
+ highlight.indentation.guides=1
+-#caret.fore=#FF0000
++caret.fore=#0000FF
+ #caret.additional.blinks=0
+-#caret.width=2
++caret.width=2
+ #caret.line.back=#FFFED8
+ #caret.line.back.alpha=63
+ edge.column=200
+@@ -121,11 +121,11 @@
+ #are.you.sure.for.build=1
+ #save.all.for.build=1
+ #quit.on.close.last=1
+-#load.on.activate=1
++load.on.activate=1
+ #save.on.deactivate=1
+-#are.you.sure.on.reload=1
++are.you.sure.on.reload=1
+ #save.on.timer=20
+-#reload.preserves.undo=1
++reload.preserves.undo=1
+ #check.if.already.open=1
+ #temp.files.sync.load=1
+ default.file.ext=.cxx
+@@ -133,11 +133,11 @@
+ #title.full.path=1
+ #title.show.buffers=1
+ #pathbar.visible=1
+-#save.recent=1
+-#save.session=1
+-#session.bookmarks=1
+-#session.folds=1
+-#save.position=1
++save.recent=1
++save.session=1
++session.bookmarks=1
++session.folds=1
++save.position=1
+ #save.find=1
+ #open.dialog.in.file.directory=1
+ #strip.trailing.spaces=1
+@@ -159,8 +159,8 @@
+ 
+ # Indentation
+ tabsize=8
+-indent.size=8
+-use.tabs=1
++indent.size=4
++use.tabs=0
+ #indent.auto=1
+ indent.automatic=1
+ indent.opening=0
+@@ -169,7 +169,7 @@
+ #backspace.unindents=0
+ 
+ # Wrapping of long lines
+-#wrap=1
++wrap=1
+ #wrap.style=2
+ #cache.layout=3
+ #output.wrap=1
+@@ -184,7 +184,7 @@
+ fold=1
+ fold.compact=1
+ fold.flags=16
+-fold.symbols=1
++fold.symbols=2
+ #fold.highlight=1
+ #fold.highlight.colour=#00C0C0
+ #fold.on.open=1
+@@ -218,7 +218,7 @@
+ #strip.button.height=24
+ 
+ # Behaviour
+-#eol.mode=LF
++eol.mode=LF
+ eol.auto=1
+ clear.before.execute=0
+ #vc.home.key=1
+@@ -245,13 +245,13 @@
+ # Status Bar
+ statusbar.number=4
+ statusbar.text.1=\
+-li=$(LineNumber) co=$(ColumnNumber) $(OverType) ($(EOLMode)) $(FileAttr)
++($(LineNumber), $(ColumnNumber)) $(OverType) <$(EOLMode)> | $(BufferLength) chars in $(NbOfLines) lines. $(SelLength) chars selected. | $(FileNameExt) : $(FileDate) - $(FileTime)
+ statusbar.text.2=\
+ $(BufferLength) chars in $(NbOfLines) lines. Sel: $(SelLength) chars.
+ statusbar.text.3=\
+ Now is: Date=$(CurrentDate) Time=$(CurrentTime)
+ statusbar.text.4=\
+-$(FileNameExt) : $(FileDate) - $(FileTime) | $(FileAttr)
++<$(FileAttr)> $(FileNameExt) : $(FileDate) - $(FileTime)
+ 
+ if PLAT_WIN
+ 	command.scite.help="file://$(SciteDefaultHome)\SciTEDoc.html"
+@@ -265,8 +265,8 @@
+ #code.page=932
+ #character.set=128
+ # Unicode
+-#code.page=65001
+-code.page=0
++code.page=65001
++#code.page=0
+ #character.set=204
+ #command.discover.properties=python /home/user/FileDetect.py "$(FilePath)"
+ # Required for Unicode to work on GTK+:
+@@ -351,7 +351,7 @@
+ $(filter.erlang)\
+ $(filter.fortran)\
+ $(filter.gap)\
+-#$(filter.hs)\
++$(filter.hs)\
+ $(filter.idl)\
+ $(filter.inno)\
+ $(filter.java)\
+@@ -393,33 +393,33 @@
+ 
+ # Give symbolic names to the set of fonts used in the standard styles.
+ if PLAT_WIN
+-	font.base=font:Verdana,size:10
+-	font.small=font:Verdana,size:8
+-	font.comment=font:Comic Sans MS,size:9
++	font.base=font:Dejavu Sans Mono,size:10
++	font.small=font:Dejavu Sans Mono,size:8
++	font.comment=font:Dejavu Sans Mono,size:9
+ 	font.code.comment.box=$(font.comment)
+ 	font.code.comment.line=$(font.comment)
+ 	font.code.comment.doc=$(font.comment)
+ 	font.code.comment.nested=$(font.comment)
+-	font.text=font:Times New Roman,size:11
+-	font.text.comment=font:Verdana,size:9
+-	font.embedded.base=font:Verdana,size:9
+-	font.embedded.comment=font:Comic Sans MS,size:8
+-	font.monospace=font:Courier New,size:10
+-	font.vbs=font:Lucida Sans Unicode,size:10
++	font.text=font:Dejavu Sans Mono,size:11
++	font.text.comment=font:Dejavu Sans Mono,size:9
++	font.embedded.base=font:Dejavu Sans Mono,size:9
++	font.embedded.comment=font:Dejavu Sans Mono,size:8
++	font.monospace=font:Dejavu Sans Mono,size:10
++	font.vbs=font:Dejavu Sans Mono,size:10
+ if PLAT_GTK
+-	font.base=font:Bitstream Vera Sans,size:9
+-	font.small=font:Bitstream Vera Sans,size:8
+-	font.comment=font:Bitstream Vera Serif,size:9
++	font.base=font:Dejavu Sans Mono,size:9
++	font.small=font:Dejavu Sans Mono,size:8
++	font.comment=font:Dejavu Sans Mono,size:9
+ 	font.code.comment.box=$(font.comment)
+ 	font.code.comment.line=$(font.comment)
+ 	font.code.comment.doc=$(font.comment)
+ 	font.code.comment.nested=$(font.comment)
+-	font.text=font:Bitstream Charter,size:10
+-	font.text.comment=font:Serif,size:9
+-	font.embedded.base=font:Serif,size:9
+-	font.embedded.comment=font:Serif,size:9
+-	font.monospace=font:Bitstream Vera Sans Mono,size:9
+-	font.vbs=font:Bitstream Vera Sans Mono,size:9
++	font.text=font:Dejavu Sans Mono,size:10
++	font.text.comment=font:Dejavu Sans Mono,size:9
++	font.embedded.base=font:Dejavu Sans Mono,size:9
++	font.embedded.comment=font:Dejavu Sans Mono,size:9
++	font.monospace=font:Dejavu Sans Mono,size:9
++	font.vbs=font:Dejavu Sans Mono,size:9
+ if PLAT_MAC
+ 	font.base=font:Verdana,size:12
+ 	font.small=font:Verdana,size:10
+@@ -471,7 +471,7 @@
+ 
+ # Global default styles for all languages
+ # Default
+-style.*.32=$(font.base)
++style.*.32=$(font.base),back:#DDDDDD,fore:#000000
+ # Line number
+ style.*.33=back:#C0C0C0,$(font.base)
+ # Brace highlight
+@@ -549,7 +549,8 @@
+ #Forth|forth||\
+ &Fortran|f90||\
+ #Gap|g||\
+-#Haskell|hs||\
++Groovy|groovy||\
++Haskell|hs||\
+ H&ypertext|html|$(keyHTML)|\
+ #&InnoSetup|iss||\
+ &Java|java||\
+@@ -582,6 +583,7 @@
+ #R|R||\
+ #Reso&urce|rc||\
+ Ruby|rb||\
++Scala|scala||\
+ Shell|sh||\
+ S&QL|sql||\
+ #Specman|e||\
+@@ -611,7 +613,7 @@
+ 
+ # To keep menus short, these .properties files are not loaded by default.
+ imports.exclude=abaqus asn1 au3 avenue avs baan blitzbasic bullant \
+-cobol cmake csound ecl escript flagship forth freebasic gap haskell inno \
++cobol cmake csound ecl escript flagship forth freebasic gap inno \
+ kix latex lot lout metapost mmixal modula3 nimrod nncrontab nsis \
+ opal oscript powerpro powershell purebasic r rebol \
+ scriptol smalltalk sorcins spice specman \

@@ -1,0 +1,11 @@
+--- ../old/lisp.properties	2013-04-12 15:06:35.000000000 +0200
++++ lisp.properties	2013-04-17 17:46:29.914553826 +0200
+@@ -4,7 +4,7 @@
+ 
+ filter.lisp=LISP (lsp lisp)|$(file.patterns.lisp)|
+ 
+-file.patterns.scheme=*.scm;*.smd;*.ss
++file.patterns.scheme=*.scm;*.smd;*.ss;*rkt
+ filter.scheme=Scheme (scm smd)|$(file.patterns.scheme)|
+ 
+ lexer.$(file.patterns.lisp)=lisp

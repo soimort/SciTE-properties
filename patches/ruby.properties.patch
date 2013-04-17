@@ -1,0 +1,18 @@
+--- ../old/ruby.properties	2013-04-12 15:06:35.000000000 +0200
++++ ruby.properties	2013-04-17 17:46:29.917887160 +0200
+@@ -1,6 +1,6 @@
+ # Define SciTE settings for Ruby files.
+ 
+-file.patterns.rb=*.rb;*.rbw;*.rake;*.rjs;Rakefile
++file.patterns.rb=*.rb;*.rbw;*.rake;*.rjs;Rakefile;Gemfile;*.gemspec
+ 
+ shbang.ruby=rb
+ 
+@@ -19,6 +19,7 @@
+ block.start.$(file.patterns.rb)=5 do
+ block.end.$(file.patterns.rb)=5 end
+ 
++indent.size.$(file.patterns.rb)=2
+ indent.opening.$(file.patterns.rb)=1
+ indent.closing.$(file.patterns.rb)=1
+ 

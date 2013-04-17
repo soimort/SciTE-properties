@@ -1,0 +1,220 @@
+--- ../old/cpp.properties	2013-04-12 15:06:35.000000000 +0200
++++ cpp.properties	2013-04-17 17:46:29.914553826 +0200
+@@ -3,13 +3,13 @@
+ # sma files are Small script (C-like)
+ file.patterns.cpp=*.c;*.cc;*.cpp;*.cxx;*.h;*.hh;*.hpp;*.hxx;*.ipp;*.m;*.mm;*.sma
+ file.patterns.cplusplus=*.cc;*.cpp;*.cxx
+-# jad = decompiled class files; pde = Processing.org sketch files
+-file.patterns.java=*.java;*.jad;*.pde
++# jad = decompiled class files; pde = Processing.org sketch files; ino = Arduino sketch files
++file.patterns.java=*.java;*.jad;*.pde;*.ino
++file.patterns.groovy=*.groovy
+ file.patterns.javafx=*.fx
+ # pln, inc and t are SilkTest (4Test) files.
+ file.patterns.test=*.pln;*.inc;*.t
+-# es = JS dialect of Abobe for SVG
+-file.patterns.js=*.js;*.es
++file.patterns.js=*.js;*.es;*.json
+ file.patterns.cs=*.cs
+ file.patterns.rc=*.rc;*.rc2;*.dlg
+ file.patterns.idl=*.idl;*.odl
+@@ -18,7 +18,9 @@
+ file.patterns.vala=*.vala
+ file.patterns.go=*.go
+ file.patterns.pike=*.pike
+-file.patterns.c.like=$(file.patterns.cpp);$(file.patterns.cs);$(file.patterns.idl);$(file.patterns.java);$(file.patterns.js);$(file.patterns.flash);$(file.patterns.ch);$(file.patterns.vala);$(file.patterns.pike)
++file.patterns.dart=*.dart
++file.patterns.rust=*.rs
++file.patterns.c.like=$(file.patterns.cpp);$(file.patterns.cs);$(file.patterns.idl);$(file.patterns.java);$(file.patterns.js);$(file.patterns.flash);$(file.patterns.ch);$(file.patterns.vala);$(file.patterns.pike);$(file.patterns.dart);$(file.patterns.rust)
+ 
+ shbang.tcc=cpp
+ shbang.tinycc=cpp
+@@ -33,8 +35,11 @@
+ filter.ch=Ch (ch chf chs)|$(file.patterns.ch)|
+ filter.go=Go (go)|$(file.patterns.go)|
+ filter.pike=Pike (pike)|$(file.patterns.pike)|
++filter.dart=Dart (dart)|$(file.patterns.dart)|
++filter.rust=Rust (rust)|$(file.patterns.rust)|
+ 
+ lexer.$(file.patterns.java)=cpp
++lexer.$(file.patterns.groovy)=cpp
+ lexer.$(file.patterns.javafx)=cpp
+ lexer.$(file.patterns.cpp)=cpp
+ lexer.$(file.patterns.rc)=cpp
+@@ -47,6 +52,8 @@
+ lexer.$(file.patterns.vala)=cpp
+ lexer.$(file.patterns.go)=cpp
+ lexer.$(file.patterns.pike)=cpp
++lexer.$(file.patterns.dart)=cpp
++lexer.$(file.patterns.rust)=cpp
+ 
+ keywordclass.cpp=and and_eq asm auto bitand bitor bool break \
+ case catch char class compl const const_cast continue \
+@@ -241,6 +248,15 @@
+ first in init into inverse last on postinit replace step trigger tween where with
+ # I don't know what first and last nor trigger do. Neither lazy or typeof...
+ 
++keywordclass.groovy=def \
++abstract assert boolean break byte case catch char class \
++const continue default do double else enum extends final finally float for \
++goto if implements import instanceof int interface long \
++native new package private protected public \
++return short static strictfp super switch synchronized this throw throws \
++transient try var void volatile while
++keywords.$(file.patterns.groovy)=$(keywordclass.groovy)
++
+ keywordclass.javascript=abstract boolean break byte case catch char class \
+ const continue debugger default delete do double else enum export extends \
+ final finally float for function goto if implements import in instanceof \
+@@ -288,6 +304,23 @@
+ function program array mapping multiset
+ keywords.$(file.patterns.pike)=$(keywordclass.pike)
+ 
++keywordclass.dart=if do for while else forEach case switch break continue \
++return try catch finally class extends implements is new \
++var void num int double bool true false \
++Object Function String RegExp \
++Comparable Hashable Pattern Date Duration \
++Iterable Collection List Set HashSet Queue Map HashMap LinkedHashMap
++keywords.$(file.patterns.dart)=$(keywordclass.dart)
++
++keywordclass.rust=import export use mod \
++alt again assert break \
++check claim class const copy drop \
++else enum export extern fail false fn for \
++if iface impl import let log loop \
++mod mut pure ret true trait type \
++unchecked unsafe while
++keywords.$(file.patterns.rust)=$(keywordclass.rust)
++
+ #lexer.cpp.track.preprocessor=1
+ #lexer.cpp.update.preprocessor=1
+ #lexer.cpp.hashquoted.strings=1
+@@ -297,7 +330,7 @@
+ # Default
+ style.cpp.32=$(font.base)
+ # White space
+-style.cpp.0=fore:#808080
++style.cpp.0=fore:#7F7F7F
+ # Comment: /* */.
+ style.cpp.1=$(colour.code.comment.box),$(font.code.comment.box)
+ # Line Comment: //.
+@@ -313,7 +346,7 @@
+ # Single quoted string
+ style.cpp.7=$(colour.char)
+ # UUIDs (only in IDL)
+-style.cpp.8=fore:#804080
++style.cpp.8=fore:#7FBF7F
+ # Preprocessor
+ style.cpp.9=$(colour.preproc)
+ # Operators
+@@ -321,76 +354,76 @@
+ # Identifiers
+ style.cpp.11=
+ # End of line where string is not closed
+-style.cpp.12=fore:#000000,$(font.monospace),back:#E0C0E0,eolfilled
++style.cpp.12=fore:#FFFFFF,$(font.monospace),back:#1F3F1F,eolfilled
+ # Verbatim strings for C#
+-style.cpp.13=fore:#007F00,$(font.monospace),back:#E0FFE0,eolfilled
++style.cpp.13=fore:#FF80FF,$(font.monospace),back:#1F001F,eolfilled
+ # Regular expressions for JavaScript
+-style.cpp.14=fore:#3F7F3F,$(font.monospace),back:#E0F0FF,eolfilled
++style.cpp.14=fore:#C080C0,$(font.monospace),back:#1F0F00,eolfilled
+ # Doc Comment Line: line comments beginning with /// or //!.
+ style.cpp.15=$(colour.code.comment.doc),$(font.code.comment.doc)
+ # Keywords2
+-style.cpp.16=fore:#B00040
++style.cpp.16=fore:#4FFFBF
+ # Comment keyword
+-style.cpp.17=fore:#3060A0,$(font.code.comment.doc)
++style.cpp.17=fore:#CF9F5F,$(font.code.comment.doc)
+ # Comment keyword error
+-style.cpp.18=fore:#804020,$(font.code.comment.doc)
++style.cpp.18=fore:#7FBFDF,$(font.code.comment.doc)
+ # Raw strings for C++0x
+-style.cpp.20=$(colour.string),back:#FFF3FF,eolfilled
++style.cpp.20=$(colour.string),back:#000C00,eolfilled
+ # Triple-quoted strings for Vala
+-style.cpp.21=$(font.monospace),fore:#007F00,back:#E0FFE0,eolfilled
++style.cpp.21=$(font.monospace),fore:#FF80FF,back:#1F001F,eolfilled
+ # Hash-quoted strings for Pike
+-style.cpp.22=$(font.monospace),fore:#007F00,back:#E7FFD7,eolfilled
++style.cpp.22=$(font.monospace),fore:#FF80FF,back:#180028,eolfilled
+ # Preprocessor stream comment
+-style.cpp.23=fore:#659900
++style.cpp.23=fore:#9A66FF
+ 
+ # Inactive states are 64 greater than their active counterparts
+ 
+ # White space
+-style.cpp.64=fore:#C0C0C0
++style.cpp.64=fore:#3F3F3F
+ # Comment: /* */.
+-style.cpp.65=$(style.cpp.1),fore:#90B090
++style.cpp.65=$(style.cpp.1),fore:#6F4F6F
+ # Line Comment: //.
+-style.cpp.66=$(style.cpp.2),fore:#90B090
++style.cpp.66=$(style.cpp.2),fore:#6F4F6F
+ # Doc comment: block comments beginning with /** or /*!
+-style.cpp.67=$(style.cpp.3),fore:#D0D0D0
++style.cpp.67=$(style.cpp.3),fore:#2F2F2F
+ # Number
+-style.cpp.68=$(style.cpp.4),fore:#90B0B0
++style.cpp.68=$(style.cpp.4),fore:#6F4F4F
+ # Keyword
+-style.cpp.69=$(style.cpp.5),fore:#9090B0
++style.cpp.69=$(style.cpp.5),fore:#6F6F4F
+ # Double quoted string
+-style.cpp.70=$(style.cpp.6),fore:#B090B0
++style.cpp.70=$(style.cpp.6),fore:#4F6F4F
+ # Single quoted string
+-style.cpp.71=$(style.cpp.7),fore:#B090B0
++style.cpp.71=$(style.cpp.7),fore:#4F6F4F
+ # UUIDs (only in IDL)
+-style.cpp.72=$(style.cpp.8),fore:#C0C0C0
++style.cpp.72=$(style.cpp.8),fore:#3F3F3F
+ # Preprocessor
+-style.cpp.73=$(style.cpp.9),fore:#B0B090
++style.cpp.73=$(style.cpp.9),fore:#4F4F6F
+ # Operators
+-style.cpp.74=$(style.cpp.10),fore:#B0B0B0
++style.cpp.74=$(style.cpp.10),fore:#4F4F4F
+ # Identifiers
+-style.cpp.75=$(style.cpp.11),fore:#B0B0B0
++style.cpp.75=$(style.cpp.11),fore:#4F4F4F
+ # End of line where string is not closed
+-style.cpp.76=$(style.cpp.12),fore:#000000
++style.cpp.76=$(style.cpp.12),fore:#FFFFFF
+ # Verbatim strings for C#
+-style.cpp.77=$(style.cpp.13),fore:#90B090
++style.cpp.77=$(style.cpp.13),fore:#6F4F6F
+ # Regular expressions for JavaScript
+-style.cpp.78=$(style.cpp.14),fore:#7FAF7F
++style.cpp.78=$(style.cpp.14),fore:#805080
+ # Doc Comment Line: line comments beginning with /// or //!.
+-style.cpp.79=$(style.cpp.15),fore:#C0C0C0
++style.cpp.79=$(style.cpp.15),fore:#3F3F3F
+ # Keywords2
+-style.cpp.80=$(style.cpp.16),fore:#C0C0C0
++style.cpp.80=$(style.cpp.16),fore:#3F3F3F
+ # Comment keyword
+-style.cpp.81=$(style.cpp.17),fore:#C0C0C0
++style.cpp.81=$(style.cpp.17),fore:#3F3F3F
+ # Comment keyword error
+-style.cpp.82=$(style.cpp.18),fore:#C0C0C0
++style.cpp.82=$(style.cpp.18),fore:#3F3F3F
+ # Raw strings for C++0x
+-style.cpp.84=$(style.cpp.20),fore:#B090B0
++style.cpp.84=$(style.cpp.20),fore:#4F6F4F
+ # Triple-quoted strings for Vala
+-style.cpp.85=$(style.cpp.21),fore:#90B090
++style.cpp.85=$(style.cpp.21),fore:#6F4F6F
+ # Hash-quoted strings for Pike
+-style.cpp.86=$(style.cpp.22),fore:#90B090
++style.cpp.86=$(style.cpp.22),fore:#6F4F6F
+ # Preprocessor stream comment
+-style.cpp.87=$(style.cpp.23),fore:#A0C090
++style.cpp.87=$(style.cpp.23),fore:#5F3F6F
+ 
+ # Braces are only matched in operator style
+ braces.cpp.style=10

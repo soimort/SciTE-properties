@@ -1,0 +1,13 @@
+--- ../old/others.properties	2013-04-12 15:06:35.000000000 +0200
++++ others.properties	2013-04-17 17:46:29.917887160 +0200
+@@ -22,6 +22,10 @@
+ 
+ colour.other.operator=fore:#B06000
+ 
++indent.size.$(file.patterns.make)=8
++tab.size.$(file.patterns.make)=8
++use.tabs.$(file.patterns.make)=1
++
+ # Properties styles
+ 
+ # Default

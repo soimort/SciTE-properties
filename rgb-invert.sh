@@ -1,6 +1,6 @@
 #!/bin/sh
 # Sample:
-#    sudo ./RGBinvert.sh /usr/share/scite/*.properties
+#    sudo ./rgb-invert.sh /usr/share/scite/*.properties
 for FILE; do
     if [ -r $FILE ]; then
         echo "Processing $FILE..."
