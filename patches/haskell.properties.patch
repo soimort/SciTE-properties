@@ -1,11 +1,11 @@
 --- ../old/haskell.properties	2013-04-12 15:06:35.000000000 +0200
-+++ haskell.properties	2013-04-17 22:40:01.142131784 +0200
++++ haskell.properties	2013-04-19 00:48:49.048219847 +0200
 @@ -1,7 +1,8 @@
  # Define SciTE settings for Haskell.
  
 -lexer.*.hs=haskell
 -filter.hs=Haskell (hs)|*.hs|
-+file.patterns.hs=*.hs;*.idr;*.agda;*.lagda
++file.patterns.hs=*.hs;*.idr;*.lidr;*.agda;*.lagda
 +lexer.$(file.patterns.hs)=haskell
 +filter.hs=Haskell (hs)|$(file.patterns.hs)|
  
