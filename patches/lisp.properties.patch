@@ -1,6 +1,10 @@
 --- ../old/lisp.properties	2013-04-12 15:06:35.000000000 +0200
-+++ lisp.properties	2013-04-17 17:46:29.914553826 +0200
-@@ -4,7 +4,7 @@
++++ lisp.properties	2013-04-18 22:39:40.671152244 +0200
+@@ -1,10 +1,10 @@
+ # Define SciTE settings for lisp and Scheme files.
+ 
+-file.patterns.lisp=*.lsp;*.lisp
++file.patterns.lisp=*.lsp;*.lisp;*.emacs
  
  filter.lisp=LISP (lsp lisp)|$(file.patterns.lisp)|
  
