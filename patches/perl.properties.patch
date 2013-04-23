@@ -1,10 +1,12 @@
 --- ../old/perl.properties	2013-04-12 15:06:35.000000000 +0200
-+++ perl.properties	2013-04-21 23:23:07.248286627 +0200
-@@ -2,7 +2,7 @@
++++ perl.properties	2013-04-23 16:12:22.891739945 +0200
+@@ -1,8 +1,8 @@
+ # Define SciTE settings for Perl, Bash, and AWK files.
  
  
- file.patterns.perl=*.pl;*.pm;*.pod
+-file.patterns.perl=*.pl;*.pm;*.pod
 -file.patterns.bash=*.sh;*.bsh;configure;*.ksh
++file.patterns.perl=*.pl;*.pm;*.pod;*.nqp;*.pir;*.pasm
 +file.patterns.bash=*.sh;*.bsh;configure;*.ksh;PKGBUILD;*.install;*rc;*.zsh
  file.patterns.awk=*.awk
  
