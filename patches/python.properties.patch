@@ -1,0 +1,22 @@
+--- ../old/python.properties	2013-04-12 15:06:35.000000000 +0200
++++ python.properties	2013-04-26 22:03:36.845041901 +0200
+@@ -2,6 +2,11 @@
+ 
+ file.patterns.py=*.py;*.pyw
+ file.patterns.scons=SConstruct;SConscript
++file.patterns.genie=*.gs
++
++indent.size.$(file.patterns.genie)=4
++tab.size.$(file.patterns.genie)=4
++use.tabs.$(file.patterns.genie)=1
+ 
+ shbang.python=py
+ 
+@@ -9,6 +14,7 @@
+ 
+ lexer.$(file.patterns.py)=python
+ lexer.$(file.patterns.scons)=python
++lexer.$(file.patterns.genie)=python
+ 
+ keywordclass.python2=and as assert break class continue def del elif \
+ else except exec finally for from global if import in is lambda not \
