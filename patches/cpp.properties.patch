@@ -1,5 +1,5 @@
 --- ../old/cpp.properties	2013-04-12 15:06:35.000000000 +0200
-+++ cpp.properties	2013-04-22 00:07:23.348424066 +0200
++++ cpp.properties	2013-04-28 12:54:21.867837798 +0200
 @@ -3,13 +3,13 @@
  # sma files are Small script (C-like)
  file.patterns.cpp=*.c;*.cc;*.cpp;*.cxx;*.h;*.hh;*.hpp;*.hxx;*.ipp;*.m;*.mm;*.sma
@@ -18,7 +18,7 @@
  file.patterns.cs=*.cs
  file.patterns.rc=*.rc;*.rc2;*.dlg
  file.patterns.idl=*.idl;*.odl
-@@ -18,7 +18,11 @@
+@@ -18,7 +18,12 @@
  file.patterns.vala=*.vala
  file.patterns.go=*.go
  file.patterns.pike=*.pike
@@ -27,11 +27,12 @@
 +file.patterns.rust=*.rs
 +file.patterns.bc=*.bc
 +file.patterns.julia=*.jl
-+file.patterns.c.like=$(file.patterns.cpp);$(file.patterns.cs);$(file.patterns.idl);$(file.patterns.java);$(file.patterns.js);$(file.patterns.flash);$(file.patterns.ch);$(file.patterns.vala);$(file.patterns.pike);$(file.patterns.dart);$(file.patterns.rust);$(file.patterns.bc);$(file.patterns.julia)
++file.patterns.maxima=*.mac
++file.patterns.c.like=$(file.patterns.cpp);$(file.patterns.cs);$(file.patterns.idl);$(file.patterns.java);$(file.patterns.js);$(file.patterns.flash);$(file.patterns.ch);$(file.patterns.vala);$(file.patterns.pike);$(file.patterns.dart);$(file.patterns.rust);$(file.patterns.bc);$(file.patterns.julia);$(file.patterns.maxima)
  
  shbang.tcc=cpp
  shbang.tinycc=cpp
-@@ -33,8 +37,13 @@
+@@ -33,8 +38,14 @@
  filter.ch=Ch (ch chf chs)|$(file.patterns.ch)|
  filter.go=Go (go)|$(file.patterns.go)|
  filter.pike=Pike (pike)|$(file.patterns.pike)|
@@ -39,13 +40,14 @@
 +filter.rust=Rust (rust)|$(file.patterns.rust)|
 +filter.bc=GNU bc (bc)|$(file.patterns.bc)|
 +filter.julia=Julia (jl)|$(file.patterns.julia)|
++filter.maxima=Maxima (mac)|$(file.patterns.maxima)|
  
  lexer.$(file.patterns.java)=cpp
 +lexer.$(file.patterns.groovy)=cpp
  lexer.$(file.patterns.javafx)=cpp
  lexer.$(file.patterns.cpp)=cpp
  lexer.$(file.patterns.rc)=cpp
-@@ -47,6 +56,10 @@
+@@ -47,6 +58,11 @@
  lexer.$(file.patterns.vala)=cpp
  lexer.$(file.patterns.go)=cpp
  lexer.$(file.patterns.pike)=cpp
@@ -53,10 +55,11 @@
 +lexer.$(file.patterns.rust)=cpp
 +lexer.$(file.patterns.bc)=cpp
 +lexer.$(file.patterns.julia)=cpp
++lexer.$(file.patterns.maxima)=cpp
  
  keywordclass.cpp=and and_eq asm auto bitand bitor bool break \
  case catch char class compl const const_cast continue \
-@@ -241,6 +254,15 @@
+@@ -241,6 +257,15 @@
  first in init into inverse last on postinit replace step trigger tween where with
  # I don't know what first and last nor trigger do. Neither lazy or typeof...
  
@@ -72,7 +75,7 @@
  keywordclass.javascript=abstract boolean break byte case catch char class \
  const continue debugger default delete do double else enum export extends \
  final finally float for function goto if implements import in instanceof \
-@@ -288,6 +310,28 @@
+@@ -288,6 +313,31 @@
  function program array mapping multiset
  keywords.$(file.patterns.pike)=$(keywordclass.pike)
  
@@ -98,10 +101,13 @@
 +keywords.$(file.patterns.julia)=$(keywordclass.cpp) \
 +function end
 +
++keywords.$(file.patterns.maxima)=$(keywordclass.cpp) \
++block
++
  #lexer.cpp.track.preprocessor=1
  #lexer.cpp.update.preprocessor=1
  #lexer.cpp.hashquoted.strings=1
-@@ -297,7 +341,7 @@
+@@ -297,7 +347,7 @@
  # Default
  style.cpp.32=$(font.base)
  # White space
@@ -110,7 +116,7 @@
  # Comment: /* */.
  style.cpp.1=$(colour.code.comment.box),$(font.code.comment.box)
  # Line Comment: //.
-@@ -313,7 +357,7 @@
+@@ -313,7 +363,7 @@
  # Single quoted string
  style.cpp.7=$(colour.char)
  # UUIDs (only in IDL)
@@ -119,7 +125,7 @@
  # Preprocessor
  style.cpp.9=$(colour.preproc)
  # Operators
-@@ -321,76 +365,76 @@
+@@ -321,76 +371,76 @@
  # Identifiers
  style.cpp.11=
  # End of line where string is not closed
