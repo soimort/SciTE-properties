@@ -1,6 +1,6 @@
 --- ../old/haskell.properties	2013-04-12 15:06:35.000000000 +0200
-+++ haskell.properties	2013-04-19 00:48:49.048219847 +0200
-@@ -1,7 +1,8 @@
++++ haskell.properties	2013-05-06 18:09:31.070032367 +0200
+@@ -1,7 +1,10 @@
  # Define SciTE settings for Haskell.
  
 -lexer.*.hs=haskell
@@ -8,10 +8,12 @@
 +file.patterns.hs=*.hs;*.idr;*.lidr;*.agda;*.lagda
 +lexer.$(file.patterns.hs)=haskell
 +filter.hs=Haskell (hs)|$(file.patterns.hs)|
++
++indent.size.$(file.patterns.hs)=2
  
  # white space
  style.haskell.0=fore:#808080
-@@ -43,6 +44,6 @@
+@@ -43,6 +46,6 @@
  keywordclass.ffi=export label dynamic safe threadsafe \
  unsafe stdcall ccall prim
  
