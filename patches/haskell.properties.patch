@@ -1,19 +1,26 @@
 --- ../old/haskell.properties	2013-04-12 15:06:35.000000000 +0200
-+++ haskell.properties	2013-05-06 18:09:31.070032367 +0200
-@@ -1,7 +1,10 @@
++++ haskell.properties	2013-05-06 21:54:20.652805774 +0200
+@@ -1,7 +1,17 @@
  # Define SciTE settings for Haskell.
  
 -lexer.*.hs=haskell
 -filter.hs=Haskell (hs)|*.hs|
-+file.patterns.hs=*.hs;*.idr;*.lidr;*.agda;*.lagda
++file.patterns.hs=*.hs
 +lexer.$(file.patterns.hs)=haskell
 +filter.hs=Haskell (hs)|$(file.patterns.hs)|
-+
 +indent.size.$(file.patterns.hs)=2
++
++file.patterns.idr=*.idr;*.lidr
++lexer.$(file.patterns.idr)=haskell
++indent.size.$(file.patterns.idr)=2
++
++file.patterns.agda=*.agda;*.lagda
++lexer.$(file.patterns.agda)=haskell
++indent.size.$(file.patterns.agda)=2
  
  # white space
  style.haskell.0=fore:#808080
-@@ -43,6 +46,6 @@
+@@ -43,6 +53,11 @@
  keywordclass.ffi=export label dynamic safe threadsafe \
  unsafe stdcall ccall prim
  
@@ -22,3 +29,8 @@
  
 -keywords2.*.hs=$(keywordclass.ffi)
 +keywords2.$(file.patterns.hs)=$(keywordclass.ffi)
++
++keywords.$(file.patterns.idr)=$(keywordclass.haskell98) \
++namespace
++
++keywords.$(file.patterns.agda)=$(keywordclass.haskell98)
