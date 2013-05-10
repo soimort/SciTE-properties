@@ -1,5 +1,5 @@
 --- ../old/haskell.properties	2013-04-12 15:06:35.000000000 +0200
-+++ haskell.properties	2013-05-09 20:54:21.543940229 +0200
++++ haskell.properties	2013-05-10 14:07:37.512097076 +0200
 @@ -1,7 +1,17 @@
  # Define SciTE settings for Haskell.
  
@@ -31,6 +31,6 @@
 +keywords2.$(file.patterns.hs)=$(keywordclass.ffi)
 +
 +keywords.$(file.patterns.idr)=$(keywordclass.haskell98) \
-+abstract access default include lib namespace partial public syntax total
++abstract access default include lib namespace parameters partial prefix private public syntax total
 +
 +keywords.$(file.patterns.agda)=$(keywordclass.haskell98)
