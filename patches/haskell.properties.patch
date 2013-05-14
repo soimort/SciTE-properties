@@ -1,5 +1,5 @@
 --- ../old/haskell.properties	2013-04-12 15:06:35.000000000 +0200
-+++ haskell.properties	2013-05-10 14:07:37.512097076 +0200
++++ haskell.properties	2013-05-10 15:01:00.565297455 +0200
 @@ -1,7 +1,17 @@
  # Define SciTE settings for Haskell.
  
@@ -10,7 +10,7 @@
 +filter.hs=Haskell (hs)|$(file.patterns.hs)|
 +indent.size.$(file.patterns.hs)=2
 +
-+file.patterns.idr=*.idr;*.lidr
++file.patterns.idr=*.idr;*.lidr;*.ipkg
 +lexer.$(file.patterns.idr)=haskell
 +indent.size.$(file.patterns.idr)=2
 +
