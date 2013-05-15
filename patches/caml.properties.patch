@@ -1,5 +1,5 @@
 --- ../old/caml.properties	2013-04-12 15:06:35.000000000 +0200
-+++ caml.properties	2013-05-12 06:16:49.363020379 +0200
++++ caml.properties	2013-05-15 18:07:19.537229754 +0200
 @@ -16,7 +16,7 @@
  
  # OCaml/SML implementation and interface files
@@ -13,7 +13,7 @@
  lexer.$(file.patterns.caml)=caml
  lexer.$(file.patterns.sml)=caml
  
-+indent.size.$(file.patterns.sml)=2
++indent.size.$(file.patterns.sml)=4
 +indent.opening.$(file.patterns.sml)=1
 +indent.closing.$(file.patterns.sml)=1
 +indent.size.$(file.patterns.caml)=4
