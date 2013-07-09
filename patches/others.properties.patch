@@ -1,5 +1,5 @@
---- ../old/others.properties	2013-04-12 15:06:35.000000000 +0200
-+++ others.properties	2013-04-17 17:46:29.917887160 +0200
+--- ../old/others.properties	2013-04-12 21:06:35.000000000 +0800
++++ others.properties	2013-04-17 23:46:29.917887160 +0800
 @@ -22,6 +22,10 @@
  
  colour.other.operator=fore:#B06000

@@ -1,5 +1,5 @@
---- ../old/SciTEGlobal.properties	2013-04-12 15:06:35.000000000 +0200
-+++ SciTEGlobal.properties	2013-04-17 20:42:17.245099596 +0200
+--- ../old/SciTEGlobal.properties	2013-04-12 21:06:35.000000000 +0800
++++ SciTEGlobal.properties	2013-04-18 02:42:17.245099596 +0800
 @@ -16,7 +16,7 @@
  position.height=740
  #position.maximize=1
