@@ -1,5 +1,5 @@
---- ../old/python.properties	2013-04-12 21:06:35.000000000 +0800
-+++ python.properties	2013-04-27 04:03:36.845041901 +0800
+--- ../old/python.properties	2013-04-12 15:06:35.000000000 +0200
++++ python.properties	2013-04-26 22:03:36.845041901 +0200
 @@ -2,6 +2,11 @@
  
  file.patterns.py=*.py;*.pyw
