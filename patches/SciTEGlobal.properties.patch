@@ -1,5 +1,5 @@
 --- ../old/SciTEGlobal.properties	2013-04-12 15:06:35.000000000 +0200
-+++ SciTEGlobal.properties	2013-04-17 20:42:17.245099596 +0200
++++ SciTEGlobal.properties	2013-09-27 02:10:44.089249949 +0200
 @@ -16,7 +16,7 @@
  position.height=740
  #position.maximize=1
@@ -207,7 +207,15 @@
  # Line number
  style.*.33=back:#C0C0C0,$(font.base)
  # Brace highlight
-@@ -549,7 +549,8 @@
+@@ -535,6 +535,7 @@
+ &Batch|bat||\
+ #Bullant|ant||\
+ &C / C++|c||\
++Clojure|clj||\
+ #CMake|cmake||\
+ C&#|cs||\
+ #COBOL|cob||\
+@@ -549,7 +550,8 @@
  #Forth|forth||\
  &Fortran|f90||\
  #Gap|g||\
@@ -217,7 +225,7 @@
  H&ypertext|html|$(keyHTML)|\
  #&InnoSetup|iss||\
  &Java|java||\
-@@ -582,6 +583,7 @@
+@@ -582,6 +584,7 @@
  #R|R||\
  #Reso&urce|rc||\
  Ruby|rb||\
@@ -225,7 +233,7 @@
  Shell|sh||\
  S&QL|sql||\
  #Specman|e||\
-@@ -611,7 +613,7 @@
+@@ -611,7 +614,7 @@
  
  # To keep menus short, these .properties files are not loaded by default.
  imports.exclude=abaqus asn1 au3 avenue avs baan blitzbasic bullant \

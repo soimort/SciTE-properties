@@ -1,15 +1,37 @@
 --- ../old/lisp.properties	2013-04-12 15:06:35.000000000 +0200
-+++ lisp.properties	2013-04-19 23:52:00.158000432 +0200
-@@ -1,10 +1,10 @@
++++ lisp.properties	2013-09-27 02:17:51.745920304 +0200
+@@ -1,14 +1,17 @@
  # Define SciTE settings for lisp and Scheme files.
  
 -file.patterns.lisp=*.lsp;*.lisp
+-
 +file.patterns.lisp=*.lsp;*.lisp;*.emacs;*.el
- 
  filter.lisp=LISP (lsp lisp)|$(file.patterns.lisp)|
  
 -file.patterns.scheme=*.scm;*.smd;*.ss
 +file.patterns.scheme=*.scm;*.smd;*.ss;*rkt
  filter.scheme=Scheme (scm smd)|$(file.patterns.scheme)|
  
++file.patterns.clojure=*.clj;*.edn;*.cljs
++filter.clojure=Clojure (clj)|$(file.patterns.clojure)|
++
  lexer.$(file.patterns.lisp)=lisp
+ lexer.$(file.patterns.scheme)=lisp
++lexer.$(file.patterns.clojure)=lisp
+ 
+ # lisp build in functions, xlisp dialect
+ keywords.$(file.patterns.lisp)= not defun + - * / = < > <= >= princ \
+@@ -76,6 +79,13 @@
+ word.chars.scheme=$(chars.alpha)$(chars.numeric)!$%&*/:<=>?^_~+-.@
+ word.characters.$(file.patterns.scheme)=$(word.chars.scheme)
+ 
++#import clojure-keywords
++#keywords.$(file.patterns.clojure)= + - * / = < > <= >= => \
++#defproject
++
++word.chars.clojure=$(chars.alpha)$(chars.numeric)!$%&*/:<=>?^_~+-.@
++word.characters.$(file.patterns.clojure)=$(word.chars.clojure)
++
+ 
+ comment.block.lisp=;
+ comment.box.start.lisp=;;
