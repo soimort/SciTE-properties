@@ -1,5 +1,5 @@
---- ../old/haskell.properties	2013-04-12 15:06:35.000000000 +0200
-+++ haskell.properties	2013-05-15 00:46:56.689296760 +0200
+--- ../old/haskell.properties	2013-04-12 21:06:35.000000000 +0800
++++ haskell.properties	2013-05-15 06:46:56.689296760 +0800
 @@ -1,7 +1,17 @@
  # Define SciTE settings for Haskell.
  

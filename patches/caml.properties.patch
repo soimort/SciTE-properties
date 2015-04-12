@@ -1,12 +1,12 @@
---- ../old/caml.properties	2013-04-12 15:06:35.000000000 +0200
-+++ caml.properties	2014-03-05 03:53:11.263455950 +0100
+--- ../old/caml.properties	2013-04-12 21:06:35.000000000 +0800
++++ caml.properties	2015-04-12 18:00:24.975401172 +0800
 @@ -15,8 +15,8 @@
  #		import caml
  
  # OCaml/SML implementation and interface files
 -file.patterns.caml=*.ml;*.mli
 -file.patterns.sml=*.sml
-+file.patterns.caml=*.ml;*.mli;*.fs
++file.patterns.caml=*.ml;*.mli;*.fs;*.fsx
 +file.patterns.sml=*.sml;*.mlb;*.sig
  
  filter.caml=Objective Caml (ml mli)|$(file.patterns.caml)|

@@ -1,5 +1,5 @@
---- ../old/cpp.properties	2013-04-12 15:06:35.000000000 +0200
-+++ cpp.properties	2014-02-25 05:02:35.040696111 +0100
+--- ../old/cpp.properties	2013-04-12 21:06:35.000000000 +0800
++++ cpp.properties	2014-02-25 12:02:35.040696111 +0800
 @@ -3,13 +3,13 @@
  # sma files are Small script (C-like)
  file.patterns.cpp=*.c;*.cc;*.cpp;*.cxx;*.h;*.hh;*.hpp;*.hxx;*.ipp;*.m;*.mm;*.sma

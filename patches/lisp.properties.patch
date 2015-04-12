@@ -1,5 +1,5 @@
---- ../old/lisp.properties	2013-04-12 15:06:35.000000000 +0200
-+++ lisp.properties	2013-09-27 02:17:51.745920304 +0200
+--- ../old/lisp.properties	2013-04-12 21:06:35.000000000 +0800
++++ lisp.properties	2013-09-27 08:17:51.745920304 +0800
 @@ -1,14 +1,17 @@
  # Define SciTE settings for lisp and Scheme files.
  

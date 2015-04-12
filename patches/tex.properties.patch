@@ -1,5 +1,5 @@
---- ../old/tex.properties	2013-04-12 15:06:35.000000000 +0200
-+++ tex.properties	2013-09-07 10:40:16.543343440 +0200
+--- ../old/tex.properties	2013-04-12 21:06:35.000000000 +0800
++++ tex.properties	2013-09-07 16:40:16.543343440 +0800
 @@ -25,6 +25,10 @@
  lexer.$(file.patterns.latex)=tex
  lexer.$(file.patterns.context)=tex
