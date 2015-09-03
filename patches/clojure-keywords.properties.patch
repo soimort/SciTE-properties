@@ -1,5 +1,5 @@
---- /dev/null	2015-03-31 08:52:05.434487729 +0800
-+++ clojure-keywords.properties	2013-09-27 08:16:05.589252724 +0800
+--- /dev/null	2015-09-01 15:52:04.415150757 +0200
++++ clojure-keywords.properties	2013-09-27 02:16:05.000000000 +0200
 @@ -0,0 +1,1035 @@
 +keywords.$(file.patterns.clojure)= * \
 +* \
