@@ -1,5 +1,5 @@
---- /dev/null	2015-03-31 08:52:05.434487729 +0800
-+++ markdown.properties	2013-04-18 04:08:21.885366840 +0800
+--- /dev/null	2015-09-01 15:52:04.415150757 +0200
++++ markdown.properties	2013-04-17 22:08:21.000000000 +0200
 @@ -0,0 +1,77 @@
 +lexer.*.md=markdown
 +lexer.*.markdown=markdown
