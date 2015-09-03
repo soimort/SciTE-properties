@@ -1,0 +1,38 @@
+--- ../old/cpp.properties	2015-09-03 14:23:21.435920969 +0200
++++ cpp.properties	2015-09-03 16:53:03.622860357 +0200
+@@ -3,8 +3,9 @@
+ # sma files are Small script (C-like)
+ file.patterns.cpp=*.c;*.cc;*.cpp;*.cxx;*.h;*.hh;*.hpp;*.hxx;*.ipp;*.m;*.mm;*.sma
+ file.patterns.cplusplus=*.cc;*.cpp;*.cxx
+-# jad = decompiled class files; pde = Processing.org sketch files
+-file.patterns.java=*.java;*.jad;*.pde
++# jad = decompiled class files; pde = Processing.org sketch files; ino = Arduino sketch files
++file.patterns.java=*.java;*.jad;*.pde;*.ino
++file.patterns.groovy=*.groovy
+ # pln, inc and t are SilkTest (4Test) files.
+ file.patterns.test=*.pln;*.inc;*.t
+ # es = JS dialect of Abobe for SVG
+@@ -36,6 +37,7 @@
+ filter.swift=Swift (swift)|$(file.patterns.swift)|
+ 
+ lexer.$(file.patterns.java)=cpp
++lexer.$(file.patterns.groovy)=cpp
+ lexer.$(file.patterns.cpp)=cpp
+ lexer.$(file.patterns.rc)=cpp
+ lexer.$(file.patterns.idl)=cpp
+@@ -237,6 +239,15 @@
+ transient try var void volatile while
+ keywords.$(file.patterns.java)=$(keywordclass.java)
+ 
++keywordclass.groovy=def \
++abstract assert boolean break byte case catch char class \
++const continue default do double else enum extends final finally float for \
++goto if implements import instanceof int interface long \
++native new package private protected public \
++return short static strictfp super switch synchronized this throw throws \
++transient try var void volatile while
++keywords.$(file.patterns.groovy)=$(keywordclass.groovy)
++
+ keywordclass.javascript=abstract boolean break byte case catch char class \
+ const continue debugger default delete do double else enum export extends \
+ final finally float for function goto if implements import in instanceof \
