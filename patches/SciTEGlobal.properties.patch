@@ -1,7 +1,7 @@
---- ../old/SciTEGlobal.properties	2013-04-12 21:06:35.000000000 +0800
-+++ SciTEGlobal.properties	2013-09-27 08:10:44.089249949 +0800
+--- ../old/SciTEGlobal.properties	2015-09-03 14:23:21.469254304 +0200
++++ SciTEGlobal.properties	2015-09-03 15:39:09.099392381 +0200
 @@ -16,7 +16,7 @@
- position.height=740
+ position.height=$(scale 740)
  #position.maximize=1
  #position.tile=1
 -#full.screen.hides.menu=1
@@ -9,8 +9,8 @@
  #minimize.to.tray=1
  split.vertical=1
  #output.horizontal.size=200
-@@ -38,15 +38,15 @@
- #toolbar.usestockicons=1
+@@ -39,15 +39,15 @@
+ #toolbar.large=1
  #menubar.detachable=1
  #undo.redo.lazy=1
 -#statusbar.visible=1
@@ -19,16 +19,16 @@
  #fileselector.height=600
  #fileselector.show.hidden=1
 -#magnification=-1
-+magnification=2
++magnification=3
  #output.magnification=-1
  
  # Sizes and visibility in edit pane
 -#line.margin.visible=1
 +line.margin.visible=1
  line.margin.width=4
- margin.width=16
- #fold.margin.width=16
-@@ -67,9 +67,9 @@
+ margin.width=$(scale 16)
+ fold.margin.width=$(scale 14)
+@@ -72,9 +72,9 @@
  view.indentation.guides=1
  view.indentation.examine=3
  highlight.indentation.guides=1
@@ -40,7 +40,7 @@
  #caret.line.back=#FFFED8
  #caret.line.back.alpha=63
  edge.column=200
-@@ -121,11 +121,11 @@
+@@ -129,11 +129,11 @@
  #are.you.sure.for.build=1
  #save.all.for.build=1
  #quit.on.close.last=1
@@ -55,7 +55,7 @@
  #check.if.already.open=1
  #temp.files.sync.load=1
  default.file.ext=.cxx
-@@ -133,11 +133,11 @@
+@@ -141,11 +141,11 @@
  #title.full.path=1
  #title.show.buffers=1
  #pathbar.visible=1
@@ -72,7 +72,7 @@
  #save.find=1
  #open.dialog.in.file.directory=1
  #strip.trailing.spaces=1
-@@ -159,8 +159,8 @@
+@@ -167,8 +167,8 @@
  
  # Indentation
  tabsize=8
@@ -83,7 +83,7 @@
  #indent.auto=1
  indent.automatic=1
  indent.opening=0
-@@ -169,7 +169,7 @@
+@@ -177,7 +177,7 @@
  #backspace.unindents=0
  
  # Wrapping of long lines
@@ -92,7 +92,7 @@
  #wrap.style=2
  #cache.layout=3
  #output.wrap=1
-@@ -184,7 +184,7 @@
+@@ -192,7 +192,7 @@
  fold=1
  fold.compact=1
  fold.flags=16
@@ -101,7 +101,7 @@
  #fold.highlight=1
  #fold.highlight.colour=#00C0C0
  #fold.on.open=1
-@@ -218,7 +218,7 @@
+@@ -229,7 +229,7 @@
  #strip.button.height=24
  
  # Behaviour
@@ -110,7 +110,7 @@
  eol.auto=1
  clear.before.execute=0
  #vc.home.key=1
-@@ -245,13 +245,13 @@
+@@ -258,13 +258,13 @@
  # Status Bar
  statusbar.number=4
  statusbar.text.1=\
@@ -126,7 +126,7 @@
  
  if PLAT_WIN
  	command.scite.help="file://$(SciteDefaultHome)\SciTEDoc.html"
-@@ -265,8 +265,8 @@
+@@ -278,8 +278,8 @@
  #code.page=932
  #character.set=128
  # Unicode
@@ -137,25 +137,16 @@
  #character.set=204
  #command.discover.properties=python /home/user/FileDetect.py "$(FilePath)"
  # Required for Unicode to work on GTK+:
-@@ -351,7 +351,7 @@
- $(filter.erlang)\
- $(filter.fortran)\
- $(filter.gap)\
--#$(filter.hs)\
-+$(filter.hs)\
- $(filter.idl)\
- $(filter.inno)\
- $(filter.java)\
-@@ -393,33 +393,33 @@
+@@ -414,47 +414,47 @@
  
  # Give symbolic names to the set of fonts used in the standard styles.
  if PLAT_WIN
--	font.base=font:Verdana,size:10
+-	font.base=font:Verdana,size:9.4
 -	font.small=font:Verdana,size:8
--	font.comment=font:Comic Sans MS,size:9
-+	font.base=font:Dejavu Sans Mono,size:10
-+	font.small=font:Dejavu Sans Mono,size:8
-+	font.comment=font:Dejavu Sans Mono,size:9
+-	font.comment=font:Georgia,size:10.1
++	font.base=font:Inconsolata,size:9.4
++	font.small=font:Inconsolata,size:8
++	font.comment=font:Inconsolata,size:10.1
  	font.code.comment.box=$(font.comment)
  	font.code.comment.line=$(font.comment)
  	font.code.comment.doc=$(font.comment)
@@ -164,21 +155,21 @@
 -	font.text.comment=font:Verdana,size:9
 -	font.embedded.base=font:Verdana,size:9
 -	font.embedded.comment=font:Comic Sans MS,size:8
--	font.monospace=font:Courier New,size:10
+-	font.monospace=font:Consolas,size:8.9
 -	font.vbs=font:Lucida Sans Unicode,size:10
-+	font.text=font:Dejavu Sans Mono,size:11
-+	font.text.comment=font:Dejavu Sans Mono,size:9
-+	font.embedded.base=font:Dejavu Sans Mono,size:9
-+	font.embedded.comment=font:Dejavu Sans Mono,size:8
-+	font.monospace=font:Dejavu Sans Mono,size:10
-+	font.vbs=font:Dejavu Sans Mono,size:10
++	font.text=font:Inconsolata,size:11
++	font.text.comment=font:Inconsolata,size:9
++	font.embedded.base=font:Inconsolata,size:9
++	font.embedded.comment=font:Inconsolata,size:8
++	font.monospace=font:Inconsolata,size:8.9
++	font.vbs=font:Inconsolata,size:10
  if PLAT_GTK
 -	font.base=font:Bitstream Vera Sans,size:9
 -	font.small=font:Bitstream Vera Sans,size:8
 -	font.comment=font:Bitstream Vera Serif,size:9
-+	font.base=font:Dejavu Sans Mono,size:9
-+	font.small=font:Dejavu Sans Mono,size:8
-+	font.comment=font:Dejavu Sans Mono,size:9
++	font.base=font:Inconsolata,size:9
++	font.small=font:Inconsolata,size:8
++	font.comment=font:Inconsolata,size:9
  	font.code.comment.box=$(font.comment)
  	font.code.comment.line=$(font.comment)
  	font.code.comment.doc=$(font.comment)
@@ -189,16 +180,39 @@
 -	font.embedded.comment=font:Serif,size:9
 -	font.monospace=font:Bitstream Vera Sans Mono,size:9
 -	font.vbs=font:Bitstream Vera Sans Mono,size:9
-+	font.text=font:Dejavu Sans Mono,size:10
-+	font.text.comment=font:Dejavu Sans Mono,size:9
-+	font.embedded.base=font:Dejavu Sans Mono,size:9
-+	font.embedded.comment=font:Dejavu Sans Mono,size:9
-+	font.monospace=font:Dejavu Sans Mono,size:9
-+	font.vbs=font:Dejavu Sans Mono,size:9
++	font.text=font:Inconsolata,size:10
++	font.text.comment=font:Inconsolata,size:9
++	font.embedded.base=font:Inconsolata,size:9
++	font.embedded.comment=font:Inconsolata,size:9
++	font.monospace=font:Inconsolata,size:9
++	font.vbs=font:Inconsolata,size:9
  if PLAT_MAC
- 	font.base=font:Verdana,size:12
- 	font.small=font:Verdana,size:10
-@@ -471,7 +471,7 @@
+-	font.base=font:Verdana,size:12
+-	font.small=font:Verdana,size:10
+-	font.comment=font:Georgia,size:13
++	font.base=font:Inconsolata,size:12
++	font.small=font:Inconsolata,size:10
++	font.comment=font:Inconsolata,size:13
+ 	font.code.comment.box=$(font.comment)
+ 	font.code.comment.line=$(font.comment)
+ 	font.code.comment.doc=$(font.comment)
+ 	font.code.comment.nested=$(font.comment)
+-	font.text=font:Times New Roman,size:13
+-	font.text.comment=font:Verdana,size:11
+-	font.embedded.base=font:Verdana,size:11
+-	font.embedded.comment=font:Comic Sans MS,size:10
+-	font.monospace=font:Courier New,size:12
+-	font.vbs=font:Lucida Sans Unicode,size:12
++	font.text=font:Inconsolata,size:13
++	font.text.comment=font:Inconsolata,size:11
++	font.embedded.base=font:Inconsolata,size:11
++	font.embedded.comment=font:Inconsolata,size:10
++	font.monospace=font:Inconsolata,size:12
++	font.vbs=font:Inconsolata,size:12
+ font.js=$(font.comment)
+ 
+ # Give symbolic names to the set of colours used in the standard styles.
+@@ -478,7 +478,7 @@
  
  # Global default styles for all languages
  # Default
@@ -207,38 +221,53 @@
  # Line number
  style.*.33=back:#C0C0C0,$(font.base)
  # Brace highlight
-@@ -535,6 +535,7 @@
- &Batch|bat||\
- #Bullant|ant||\
- &C / C++|c||\
-+Clojure|clj||\
- #CMake|cmake||\
- C&#|cs||\
- #COBOL|cob||\
-@@ -549,7 +550,8 @@
+@@ -550,13 +550,13 @@
+ D|d||\
+ &Difference|diff||\
+ #&Eiffel|e||\
+-#Erlang|erl||\
++Erlang|erl||\
+ &Errorlist|err||\
+ #FlagShip|prg||\
  #Forth|forth||\
  &Fortran|f90||\
  #Gap|g||\
 -#Haskell|hs||\
-+Groovy|groovy||\
 +Haskell|hs||\
  H&ypertext|html|$(keyHTML)|\
  #&InnoSetup|iss||\
- &Java|java||\
-@@ -582,6 +584,7 @@
- #R|R||\
+ #Intel HEX|hex||\
+@@ -574,7 +574,7 @@
+ #Modula-3|m3||\
+ #&nnCron crontab|tab||\
+ #NSIS|nsis||\
+-#Objective Caml|ml||\
++Objective Caml|ml||\
+ #Octave|m.octave||\
+ #Opal|impl||\
+ Pascal|pas||\
+@@ -587,10 +587,10 @@
+ #PowerPro|powerpro||\
+ &Properties|properties||\
+ Pytho&n|py||\
+-#R|R||\
++R|R||\
  #Reso&urce|rc||\
  Ruby|rb||\
-+Scala|scala||\
+-#Rust|rs||\
++Rust|rs||\
  Shell|sh||\
  S&QL|sql||\
  #Specman|e||\
-@@ -611,7 +614,7 @@
+@@ -624,9 +624,9 @@
  
  # To keep menus short, these .properties files are not loaded by default.
- imports.exclude=abaqus asn1 au3 avenue avs baan blitzbasic bullant \
--cobol cmake csound ecl escript flagship forth freebasic gap haskell inno \
-+cobol cmake csound ecl escript flagship forth freebasic gap inno \
+ imports.exclude=abaqus asl asn1 au3 avenue avs baan blitzbasic bullant \
+-cobol cmake csound ecl escript flagship forth freebasic gap haskell hex inno \
++cobol csound ecl escript flagship forth freebasic gap hex inno \
  kix latex lot lout metapost mmixal modula3 nimrod nncrontab nsis \
- opal oscript powerpro powershell purebasic r rebol \
+-opal oscript powerpro powershell purebasic r rebol rust \
++opal oscript powerpro powershell purebasic r rebol \
  scriptol smalltalk sorcins spice specman \
+ tacl tal txt2tags verilog vhdl
+ # Newly removed: ave baan escript lot metapost mmixal
