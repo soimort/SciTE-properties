@@ -1,5 +1,5 @@
---- ../old/haskell.properties	2013-04-12 21:06:35.000000000 +0800
-+++ haskell.properties	2013-05-15 06:46:56.689296760 +0800
+--- ../old/haskell.properties	2015-09-03 14:23:21.452587636 +0200
++++ haskell.properties	2015-09-03 16:44:47.466178625 +0200
 @@ -1,7 +1,17 @@
  # Define SciTE settings for Haskell.
  
@@ -20,7 +20,7 @@
  
  # white space
  style.haskell.0=fore:#808080
-@@ -43,6 +53,11 @@
+@@ -45,6 +55,11 @@
  keywordclass.ffi=export label dynamic safe threadsafe \
  unsafe stdcall ccall prim
  
