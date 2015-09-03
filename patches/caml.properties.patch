@@ -1,27 +1,32 @@
---- ../old/caml.properties	2013-04-12 21:06:35.000000000 +0800
-+++ caml.properties	2015-04-12 18:00:24.975401172 +0800
-@@ -15,8 +15,8 @@
- #		import caml
+--- ../old/caml.properties	2015-09-03 14:23:21.435920969 +0200
++++ caml.properties	2015-09-03 16:04:22.012771650 +0200
+@@ -16,14 +16,17 @@
  
  # OCaml/SML implementation and interface files
--file.patterns.caml=*.ml;*.mli
+ file.patterns.caml=*.ml;*.mli
 -file.patterns.sml=*.sml
-+file.patterns.caml=*.ml;*.mli;*.fs;*.fsx
 +file.patterns.sml=*.sml;*.mlb;*.sig
++file.patterns.fs=*.fsx;*.fs;*.fsi;*.fsscript
  
  filter.caml=Objective Caml (ml mli)|$(file.patterns.caml)|
  filter.sml=Standard ML 97 (sml ml)|$(file.patterns.sml)|
-@@ -25,6 +25,13 @@
++filter.fs=F# (fsx fsscript fs fsi)|$(file.patterns.fs)|
+ 
+ lexer.*.caml=caml
  lexer.$(file.patterns.caml)=caml
  lexer.$(file.patterns.sml)=caml
++lexer.$(file.patterns.fs)=caml
  
-+indent.size.$(file.patterns.sml)=4
-+indent.opening.$(file.patterns.sml)=1
-+indent.closing.$(file.patterns.sml)=1
-+indent.size.$(file.patterns.caml)=4
-+indent.opening.$(file.patterns.caml)=1
-+indent.closing.$(file.patterns.caml)=1
-+
  # the line below is ONLY used as part of "external" lexer support
  #lexerpath.$(file.patterns.caml)=LexCaml.dll
- #lexerpath.$(file.patterns.sml)=LexCaml.dll
+@@ -53,6 +56,10 @@
+ val while withtype with
+ keywords.$(file.patterns.sml)=$(keywordstandard.sml)
+ 
++# the standard F# language "textual" keywords
++keywordclass.fs=abstract and as assert base begin class default delegate do done downcast downto elif else end exception extern false finally for fun function global if in inherit inline interface internal lazy let let! match member module mutable namespace new not null of open or override private public rec return return! select static struct then to true try type upcast use use! val void when while with yield yield!
++keywords.$(file.patterns.fs)=$(keywordclass.fs)
++
+ # "optional" Objective Caml / library keywords; some suggested entries are here,
+ # more could come from, say, Pervasives ('parser' is from Camlp4)
+ keywordoptional1.caml= \
