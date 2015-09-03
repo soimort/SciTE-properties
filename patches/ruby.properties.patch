@@ -1,5 +1,5 @@
---- ../old/ruby.properties	2013-04-12 21:06:35.000000000 +0800
-+++ ruby.properties	2013-07-09 20:54:44.436856491 +0800
+--- ../old/ruby.properties	2015-09-03 14:23:21.459254303 +0200
++++ ruby.properties	2015-09-03 16:14:50.512790732 +0200
 @@ -1,6 +1,6 @@
  # Define SciTE settings for Ruby files.
  
