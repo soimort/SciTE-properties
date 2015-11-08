@@ -1,5 +1,5 @@
 --- ../old/SciTEGlobal.properties	2015-09-03 14:23:21.469254304 +0200
-+++ SciTEGlobal.properties	2015-09-03 15:39:09.099392381 +0200
++++ SciTEGlobal.properties	2015-11-08 02:06:29.460674724 +0100
 @@ -16,7 +16,7 @@
  position.height=$(scale 740)
  #position.maximize=1
@@ -144,9 +144,9 @@
 -	font.base=font:Verdana,size:9.4
 -	font.small=font:Verdana,size:8
 -	font.comment=font:Georgia,size:10.1
-+	font.base=font:Inconsolata,size:9.4
-+	font.small=font:Inconsolata,size:8
-+	font.comment=font:Inconsolata,size:10.1
++	font.base=font:Consolas,size:9.4
++	font.small=font:Consolas,size:8
++	font.comment=font:Consolas,size:10.1
  	font.code.comment.box=$(font.comment)
  	font.code.comment.line=$(font.comment)
  	font.code.comment.doc=$(font.comment)
@@ -155,14 +155,13 @@
 -	font.text.comment=font:Verdana,size:9
 -	font.embedded.base=font:Verdana,size:9
 -	font.embedded.comment=font:Comic Sans MS,size:8
--	font.monospace=font:Consolas,size:8.9
++	font.text=font:Consolas,size:11
++	font.text.comment=font:Consolas,size:9
++	font.embedded.base=font:Consolas,size:9
++	font.embedded.comment=font:Consolas,size:8
+ 	font.monospace=font:Consolas,size:8.9
 -	font.vbs=font:Lucida Sans Unicode,size:10
-+	font.text=font:Inconsolata,size:11
-+	font.text.comment=font:Inconsolata,size:9
-+	font.embedded.base=font:Inconsolata,size:9
-+	font.embedded.comment=font:Inconsolata,size:8
-+	font.monospace=font:Inconsolata,size:8.9
-+	font.vbs=font:Inconsolata,size:10
++	font.vbs=font:Consolas,size:10
  if PLAT_GTK
 -	font.base=font:Bitstream Vera Sans,size:9
 -	font.small=font:Bitstream Vera Sans,size:8

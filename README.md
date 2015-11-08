@@ -31,8 +31,8 @@ Here's the configuration for my second favorite editor.
 
 ## Requirements
 
-* Operating system: *nix (SciTE properties are installed in `/usr/share/scite/`)
-* Font: [Inconsolata](http://www.levien.com/type/myfonts/inconsolata.html)
+* Operating system: *nix (SciTE properties are installed in `/usr/share/scite/`) or Windows
+* Font: [Inconsolata](http://www.levien.com/type/myfonts/inconsolata.html) or [Consolas](http://www.microsoft.com/Typography/Fonts/family.aspx?FID=300) (Windows)
 
 ## Installation
 
