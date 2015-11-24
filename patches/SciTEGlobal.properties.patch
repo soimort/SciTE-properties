@@ -1,5 +1,5 @@
 --- ../old/SciTEGlobal.properties	2015-09-03 14:23:21.469254304 +0200
-+++ SciTEGlobal.properties	2015-11-08 02:06:29.460674724 +0100
++++ SciTEGlobal.properties	2015-11-24 04:11:45.239231749 +0100
 @@ -16,7 +16,7 @@
  position.height=$(scale 740)
  #position.maximize=1
@@ -266,7 +266,7 @@
 +cobol csound ecl escript flagship forth freebasic gap hex inno \
  kix latex lot lout metapost mmixal modula3 nimrod nncrontab nsis \
 -opal oscript powerpro powershell purebasic r rebol rust \
-+opal oscript powerpro powershell purebasic r rebol \
++opal oscript powerpro powershell purebasic rebol \
  scriptol smalltalk sorcins spice specman \
  tacl tal txt2tags verilog vhdl
  # Newly removed: ave baan escript lot metapost mmixal

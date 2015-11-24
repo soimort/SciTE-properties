@@ -11,6 +11,7 @@ Here's the configuration for my second favorite editor.
 ### Highlighting support for more languages
 
 * Haskell (enabled by default)
+* R (enabled by default)
 * Rust (enabled by default)
 * Clojure
 * Groovy
