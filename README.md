@@ -1,6 +1,7 @@
 # My SciTE configuration
 
-Here's the configuration for my second favorite editor.
+**[OBSOLETE] See [soimort/dotfiles](https://github.com/soimort/dotfiles) for my minimal `.SciTEUser.properties` configuration.**
+<del>Here's the configuration for my second favorite editor.</del>
 
 ## Features
 
